@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item android:title="@string/menuSubHeaderCreate">
+            <menu>
+                <item
+                    android:id="@+id/menuCreateUser"
+                    android:title="@string/menuCreateUser"
+                    android:orderInCategory="101">
+                </item>
+                <item
+                    android:id="@+id/menuCreateTask"
+                    android:title="@string/menuCreateTask"
+                    android:orderInCategory="102">
+                </item>
+            </menu>
+        </item>
+        <item android:title="@string/menuSubHeaderAction">
+            <menu>
+                <item
+                    android:id="@+id/menuAssignTask"
+                    android:title="@string/menuAssignTask"
+                    android:orderInCategory="103">
+                </item>
+                <item
+                    android:id="@+id/menuShowOngoing"
+                    android:title="@string/menuShowOngoing"
+                    android:orderInCategory="301">
+                </item>
+            </menu>
+        </item>
+        <item android:title="@string/menuSubHeaderPayment">
+            <menu>
+                <item
+                    android:id="@+id/menuCalculatePoint"
+                    android:title="@string/menuCalculatePoint"
+                    android:orderInCategory="104">
+                </item>
+            </menu>
+        </item>
+        <item android:title="@string/menuSubHeaderList">
+            <menu>
+                <item
+                    android:id="@+id/menuUserList"
+                    android:title="@string/menuUserList"
+                    android:orderInCategory="201">
+                </item>
+                <item
+                    android:id="@+id/menuTaskList"
+                    android:title="@string/menuTaskList"
+                    android:orderInCategory="202">
+                </item>
+            </menu>
+        </item>
+    </group>
+
+</menu>

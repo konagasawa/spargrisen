@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/item_margin"
+    android:padding="@dimen/item_padding"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:background="@drawable/user_item_background"
+    >
+
+    <ImageView
+        android:id="@+id/userListItemIcon"
+        android:layout_width="@dimen/item_icon_size_width"
+        android:layout_height="@dimen/item_icon_size_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/spagrisen_pink"
+        >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/userListUserNameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/userNameHint"
+        android:textColorHint="@color/white"
+        android:textSize="@dimen/contextItemTitleTextSize"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxLength="30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userListItemIcon"
+        android:layout_marginStart="@dimen/item_text_double_margin"
+        android:textColor="@color/white"
+
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/userListRateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/contextItemTitleTextSize"
+        app:layout_constraintTop_toBottomOf="@+id/userListUserNameTv"
+        app:layout_constraintStart_toEndOf="@+id/userListItemIcon"
+        app:layout_constraintEnd_toStartOf="@+id/userListRateUnitTv"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginStart="@dimen/item_text_double_margin"
+        android:textColor="@color/white"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/userListRateUnitTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/contextItemTitleTextSizeSmall"
+        app:layout_constraintTop_toBottomOf="@+id/userListUserNameTv"
+        app:layout_constraintStart_toEndOf="@+id/userListRateTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/userListRateTv"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="@string/pointUnit"
+        android:layout_marginStart="@dimen/item_text_double_margin"
+        android:textColor="@color/white"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/userListPointUnitCommentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/contextItemTitleTextSizeSmall"
+        app:layout_constraintTop_toBottomOf="@+id/userListUserNameTv"
+        app:layout_constraintStart_toEndOf="@+id/userListRateUnitTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/userListRateUnitTv"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="@string/pointUnitComment"
+        android:layout_marginStart="@dimen/item_text_double_margin"
+        android:textColor="@color/white"
+        >
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">180dp</dimen>
+    <dimen name="nav_icon_horizontal_margin">8dp</dimen>
+    <dimen name="nav_icon_vertical_margin">8dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    //Context
+    <dimen name="context_main_horizontal_margin">16dp</dimen>
+    <dimen name="context_main_vertical_margin">16dp</dimen>
+    <dimen name="contextTextSize">20sp</dimen>
+    <dimen name="contextTitleTextSize">24dp</dimen>
+    <dimen name="contextItemTitleTextSize">18sp</dimen>
+    <dimen name="contextItemTitleTextSizeSmall">14sp</dimen>
+    //Create Child Screen
+    <dimen name="field_horizontal_margin">16dp</dimen>
+    <dimen name="field_vertical_margin">16dp</dimen>
+    <dimen name="create_user_button_text_size">18sp</dimen>
+
+    //Container
+    <dimen name="taskInputContainerHeight">260dp</dimen>
+    <dimen name="taskInputItemTopMargin">20dp</dimen>
+    <dimen name="assignTaskListContainerHeight">400dp</dimen>
+    <dimen name="taskListByUserContainerHeight">400dp</dimen>
+
+    //Create Task
+    <dimen name="task_detail_margin">10dp</dimen>
+    <dimen name="task_title_margin">10dp</dimen>
+    <dimen name="task_button_text_size">18sp</dimen>
+
+    //Calculate Total
+    <dimen name="pointTotalTextSize">32sp</dimen>
+    <dimen name="pointTotalUnitTextSize">24sp</dimen>
+    <dimen name="pointTotalContainerWidth"></dimen>
+    <dimen name="pointTotalContainerHeight">200dp</dimen>
+    <dimen name="pointGrisImageSize">220dp</dimen>
+
+    //Month Button
+    <dimen name="buttonLabelTextSize">20sp</dimen>
+    <dimen name="monthButtonWidth">60dp</dimen>
+    <dimen name="monthButtonHeight">60dp</dimen>
+    <dimen name="monthButtonMargin">2dp</dimen>
+
+    //User Icon And PlaceHolder Size
+    <dimen name="userIconWidth">70dp</dimen>
+    <dimen name="userIconHeight">70dp</dimen>
+    <dimen name="userIconMaxWidth">42dp</dimen>
+    <dimen name="userIconTextSize">16sp</dimen>
+
+    <dimen name="userIconCreateUserPlaceHolderWidth">180dp</dimen>
+    <dimen name="userIconCreateUserPlaceHolderHeight">180dp</dimen>
+    <dimen name="userIconCreateUserPlaceHolderMaxWidth">72dp</dimen>
+    <dimen name="userIconCreateUserPlaceHolderTextSize">18sp</dimen>
+
+
+    <dimen name="userIconPlaceHolderMaxWidth">42dp</dimen>
+    <dimen name="userIconPlaceHolderTextSize">16sp</dimen>
+    <dimen name="userIconAssignTaskPlaceHolderWidth">80dp</dimen>
+    <dimen name="userIconAssignTaskPlaceHolderHeight">80dp</dimen>
+    <dimen name="userIconTaskListByUserPlaceHolderWidth">80dp</dimen>
+    <dimen name="userIconTaskListByUserPlaceHolderHeight">80dp</dimen>
+    <dimen name="userIconCalculatePointUserPlaceHolderWidth">80dp</dimen>
+    <dimen name="userIconCalculatePointUserPlaceHolderHeight">80dp</dimen>
+
+
+    <dimen name="userIconCreatedCheckWidth">140dp</dimen>
+    <dimen name="userIconCreatedCheckHeight">140dp</dimen>
+
+    //Task Info Outline
+    <dimen name="task_info_outline_corner">20dp</dimen>
+    <dimen name="task_info_outline_padding">10dp</dimen>
+    <dimen name="task_info_outline_width">1dp</dimen>
+
+    //Task list
+    <dimen name="item_margin">4dp</dimen>
+    <dimen name="item_padding">4dp</dimen>
+    <dimen name="item_text_margin">4dp</dimen>
+    <dimen name="item_text_padding">4dp</dimen>
+    <dimen name="item_text_double_margin">8dp</dimen>
+    <dimen name="item_text_double_padding">8dp</dimen>
+    <dimen name="item_text_max_width">100dp</dimen>
+    <dimen name="item_icon_size_width">50dp</dimen>
+    <dimen name="item_icon_size_height">50dp</dimen>
+
+    //Complete task
+    <dimen name="taskCompleteMessageTextSize">40sp</dimen>
+
+    //Task Status Sort Button
+    <dimen name="taskStatusSortTextSize">14sp</dimen>
+    <dimen name="taskStatusSortWidthSize">80dp</dimen>
+    <dimen name="taskStatusSortHeightSize">20dp</dimen>
+    <dimen name="taskStatusSortLineWidthSize">60dp</dimen>
+    <dimen name="taskStatusSortLineHeightSize">14dp</dimen>
+
+</resources>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="userViewModel"
+            type="com.technology.mycow.spargrisenkt.viewmodel.UserViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createUserFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/createUserFragmentBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/spargrisen_darkpink_main_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0.5"
+            >
+        </ImageView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/createUserNestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/createUserContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/createUserIconLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/createUserInputLinearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/userIconCreatedCheckImage"
+                    android:layout_width="@dimen/userIconCreatedCheckWidth"
+                    android:layout_height="@dimen/userIconCreatedCheckHeight"
+                    app:layout_constraintTop_toTopOf="@+id/createUserIconPlaceHolder"
+                    app:layout_constraintStart_toStartOf="@+id/createUserIconPlaceHolder"
+                    app:layout_constraintEnd_toEndOf="@+id/createUserIconPlaceHolder"
+                    app:layout_constraintBottom_toBottomOf="@+id/createUserIconPlaceHolder"
+                    >
+                </ImageView>
+
+                <androidx.constraintlayout.widget.Placeholder
+                    android:id="@+id/createUserIconPlaceHolder"
+                    android:layout_width="@dimen/userIconCreateUserPlaceHolderWidth"
+                    android:layout_height="@dimen/userIconCreateUserPlaceHolderHeight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                </androidx.constraintlayout.widget.Placeholder>
+                    <TextView
+                        android:id="@+id/createUserIconPlaceHolder_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/createUserIconPlaceHolder"
+                        app:layout_constraintEnd_toEndOf="@+id/createUserIconPlaceHolder"
+                        app:layout_constraintStart_toStartOf="@+id/createUserIconPlaceHolder"
+                        app:layout_constraintTop_toTopOf="@+id/createUserIconPlaceHolder"
+
+                        android:textColor="@color/colorGrisIconPlaceHolderText"
+                        android:maxWidth="@dimen/userIconCreateUserPlaceHolderMaxWidth"
+                        android:textSize="@dimen/userIconCreateUserPlaceHolderTextSize"
+                        app:layout_constraintVertical_bias="@dimen/userIconCreateUserPlaceHolderVerticalBias"
+                        app:layout_constraintHorizontal_bias="@dimen/userIconCreateUserPlaceHolderHorizontalBias"
+                        >
+                    </TextView>
+
+                <ImageView
+                    android:id="@+id/userImage_1"
+                    android:tag="@string/userImage_1"
+                    android:layout_width="@dimen/userIconWidth"
+                    android:layout_height="@dimen/userIconHeight"
+                    android:src="@drawable/spagrisen_pink"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userImage_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/createUserIconPlaceHolder"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    >
+
+                </ImageView>
+                    <TextView
+                        android:id="@+id/userImage_1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintTop_toTopOf="@+id/userImage_1"
+                        app:layout_constraintStart_toStartOf="@+id/userImage_1"
+                        app:layout_constraintEnd_toEndOf="@+id/userImage_1"
+                        app:layout_constraintBottom_toBottomOf="@+id/userImage_1"
+
+                        android:textColor="@color/colorGrisIconText"
+                        android:maxWidth="@dimen/userIconMaxWidth"
+                        android:textSize="@dimen/userIconTextSize"
+                        app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                        app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                        >
+                    </TextView>
+
+                <ImageView
+                    android:id="@+id/userImage_2"
+                    android:tag="@string/userImage_2"
+                    android:layout_width="@dimen/userIconWidth"
+                    android:layout_height="@dimen/userIconHeight"
+                    android:src="@drawable/spagrisen_blue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userImage_3"
+                    app:layout_constraintStart_toEndOf="@+id/userImage_1"
+                    app:layout_constraintTop_toBottomOf="@+id/createUserIconPlaceHolder"
+                    app:layout_constraintHorizontal_chainStyle="spread">
+                </ImageView>
+                    <TextView
+                        android:id="@+id/userImage_2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintTop_toTopOf="@+id/userImage_2"
+                        app:layout_constraintStart_toStartOf="@+id/userImage_2"
+                        app:layout_constraintEnd_toEndOf="@+id/userImage_2"
+                        app:layout_constraintBottom_toBottomOf="@+id/userImage_2"
+
+                        android:textColor="@color/colorGrisIconText"
+                        android:maxWidth="@dimen/userIconMaxWidth"
+                        android:textSize="@dimen/userIconTextSize"
+                        app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                        app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                        >
+                    </TextView>
+
+                <ImageView
+                    android:id="@+id/userImage_3"
+                    android:tag="@string/userImage_3"
+                    android:layout_width="@dimen/userIconWidth"
+                    android:layout_height="@dimen/userIconHeight"
+                    android:src="@drawable/spagrisen_green"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userImage_4"
+                    app:layout_constraintStart_toEndOf="@+id/userImage_2"
+                    app:layout_constraintTop_toBottomOf="@+id/createUserIconPlaceHolder"
+                    app:layout_constraintHorizontal_chainStyle="spread">
+                </ImageView>
+                    <TextView
+                        android:id="@+id/userImage_3_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintTop_toTopOf="@+id/userImage_3"
+                        app:layout_constraintStart_toStartOf="@+id/userImage_3"
+                        app:layout_constraintEnd_toEndOf="@+id/userImage_3"
+                        app:layout_constraintBottom_toBottomOf="@+id/userImage_3"
+
+                        android:textColor="@color/colorGrisIconText"
+                        android:maxWidth="@dimen/userIconMaxWidth"
+                        android:textSize="@dimen/userIconTextSize"
+                        app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                        app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                        >
+                    </TextView>
+
+
+                <ImageView
+                    android:id="@+id/userImage_4"
+                    android:tag="@string/userImage_4"
+                    android:layout_width="@dimen/userIconWidth"
+                    android:layout_height="@dimen/userIconHeight"
+                    android:src="@drawable/spagrisen_red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userImage_5"
+                    app:layout_constraintStart_toEndOf="@+id/userImage_3"
+                    app:layout_constraintTop_toBottomOf="@+id/createUserIconPlaceHolder"
+                    app:layout_constraintHorizontal_chainStyle="spread">
+                </ImageView>
+                    <TextView
+                        android:id="@+id/userImage_4_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintTop_toTopOf="@+id/userImage_4"
+                        app:layout_constraintStart_toStartOf="@+id/userImage_4"
+                        app:layout_constraintEnd_toEndOf="@+id/userImage_4"
+                        app:layout_constraintBottom_toBottomOf="@+id/userImage_4"
+
+                        android:textColor="@color/colorGrisIconText"
+                        android:maxWidth="@dimen/userIconMaxWidth"
+                        android:textSize="@dimen/userIconTextSize"
+                        app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                        app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                        >
+                    </TextView>
+
+                <ImageView
+                    android:id="@+id/userImage_5"
+                    android:tag="@string/userImage_5"
+                    android:layout_width="@dimen/userIconWidth"
+                    android:layout_height="@dimen/userIconHeight"
+                    android:src="@drawable/spagrisen_yellow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/userImage_4"
+                    app:layout_constraintTop_toBottomOf="@+id/createUserIconPlaceHolder"
+                    app:layout_constraintHorizontal_chainStyle="spread">
+                </ImageView>
+                    <TextView
+                        android:id="@+id/userImage_5_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintTop_toTopOf="@+id/userImage_5"
+                        app:layout_constraintStart_toStartOf="@+id/userImage_5"
+                        app:layout_constraintEnd_toEndOf="@+id/userImage_5"
+                        app:layout_constraintBottom_toBottomOf="@+id/userImage_5"
+
+                        android:textColor="@color/colorGrisIconText"
+                        android:maxWidth="@dimen/userIconMaxWidth"
+                        android:textSize="@dimen/userIconTextSize"
+                        app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                        app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                        >
+                    </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/createUserInputLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createUserIconLinearLayout"
+
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/userNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userNameLabel"
+                        app:layout_constraintBaseline_toBaselineOf="@id/userNameEt"
+                        app:layout_constraintEnd_toStartOf="@+id/userNameEt"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/userNameEt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/field_vertical_margin"
+                        android:hint="@string/userNameHint"
+                        android:inputType="text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/userNameTv"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/rateOfPointTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rateOfPointLabel"
+                        app:layout_constraintBaseline_toBaselineOf="@id/rateOfPointEt"
+                        app:layout_constraintEnd_toStartOf="@+id/rateOfPointEt"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/userNameTv">
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/rateOfPointEt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/field_vertical_margin"
+                        android:hint="@string/rateOfPointHint"
+                        android:inputType="number"
+                        app:layout_constraintEnd_toStartOf="@+id/pointUnitTv"
+                        app:layout_constraintStart_toEndOf="@+id/rateOfPointTv"
+                        app:layout_constraintTop_toBottomOf="@+id/userNameEt"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        ></EditText>
+
+                    <TextView
+                        android:id="@+id/pointUnitTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@+id/rateOfPointEt"
+                        app:layout_constraintTop_toBottomOf="@+id/userNameEt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintBaseline_toBaselineOf="@id/rateOfPointEt">
+                    </TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/createUserButtonContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/createUserInputLinearLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/createUserBtnLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/create_user_button_text_size"
+                            app:layout_constraintTop_toTopOf="@id/createUserBtn"
+                            app:layout_constraintStart_toStartOf="@+id/createUserBtn"
+                            app:layout_constraintEnd_toEndOf="@+id/createUserBtn"
+                            app:layout_constraintBottom_toBottomOf="@+id/createUserBtn"
+                            >
+                        </TextView>
+                        <ImageButton
+                            android:id="@+id/createUserBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/field_vertical_margin"
+                            android:text="@string/createUserLabelBtn"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                        </ImageButton>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!--        <LinearLayout
+            android:id="@+id/bottomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="end"
+            android:orientation="horizontal"
+            />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

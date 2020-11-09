@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="userIconVerticalBias" type="dimen" format="float">0.55</item>
+    <item name="userIconHorizontalBias" type="dimen" format="float">0.6</item>
+    <item name="userIconCreateUserPlaceHolderVerticalBias" type="dimen" format="float">0.55</item>
+    <item name="userIconCreateUserPlaceHolderHorizontalBias" type="dimen" format="float">0.6</item>
+    <item name="userIconPlaceHolderVerticalBias" type="dimen" format="float">0.55</item>
+    <item name="userIconPlaceHolderHorizontalBias" type="dimen" format="float">0.6</item>
+    
+</resources>

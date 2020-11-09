@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <item name="Create Child" type="id">-->
+    <!--        -->
+    <!--    </item>-->
+    <!--    <item name="Assign a Task" type="drawable">-->
+
+    <!--    </item>-->
+    <!--    <item name="Show Ongoing" type="drawable">-->
+
+    <!--    </item>-->
+    <!--    <item name="Show History" type="drawable">-->
+
+    <!--    </item>-->
+
+    <array name="icons">
+        <item>@drawable/spagrisen_pink</item>
+        <item>@drawable/spagrisen_blue</item>
+        <item>@drawable/spagrisen_green</item>
+        <item>@drawable/spagrisen_red</item>
+        <item>@drawable/spagrisen_red</item>
+    </array>
+</resources>

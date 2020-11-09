@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calculatePointFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/calculatePointFragmentBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/spargrisen_darkpink_main_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:alpha="0.5"
+        >
+    </ImageView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+<!--                        <TableLayout
+                            android:id="@+id/calculatePointUserIconTableLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            >
+                        </TableLayout>-->
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/calculatePointUserIconLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toTopOf="@+id/monthButtonJanToJunLinearLayout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            >
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                        <androidx.constraintlayout.widget.Placeholder
+                                            android:id="@+id/calculatePointUserIconPlaceHolder"
+                                            android:layout_width="@dimen/userIconCalculatePointUserPlaceHolderWidth"
+                                            android:layout_height="@dimen/userIconCalculatePointUserPlaceHolderHeight"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+                                        </androidx.constraintlayout.widget.Placeholder>
+                                            <TextView
+                                                android:id="@+id/calculatePointUserIconPlaceHolder_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:gravity="center_horizontal"
+                                                android:singleLine="true"
+                                                android:textStyle="bold"
+                                                app:layout_constraintBottom_toBottomOf="@+id/calculatePointUserIconPlaceHolder"
+                                                app:layout_constraintEnd_toEndOf="@+id/calculatePointUserIconPlaceHolder"
+                                                app:layout_constraintStart_toStartOf="@+id/calculatePointUserIconPlaceHolder"
+                                                app:layout_constraintTop_toTopOf="@+id/calculatePointUserIconPlaceHolder"
+
+                                                android:textColor="@color/colorGrisIconPlaceHolderText"
+                                                android:maxWidth="@dimen/userIconPlaceHolderMaxWidth"
+                                                android:textSize="@dimen/userIconPlaceHolderTextSize"
+                                                app:layout_constraintVertical_bias="@dimen/userIconPlaceHolderVerticalBias"
+                                                app:layout_constraintHorizontal_bias="@dimen/userIconPlaceHolderHorizontalBias"
+                                                >
+                                            </TextView>
+
+                                        <ImageView
+                                            android:id="@+id/userImage_1"
+                                            android:tag="userImage_1"
+                                            android:layout_width="@dimen/userIconWidth"
+                                            android:layout_height="@dimen/userIconHeight"
+                                            android:src="@drawable/spagrisen_pink"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/userImage_2"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/calculatePointUserIconPlaceHolder"
+                                            app:layout_constraintHorizontal_chainStyle="spread"
+                                            >
+                                        </ImageView>
+                                            <TextView
+                                                android:id="@+id/userImage_1_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:singleLine="true"
+                                                android:gravity="center_horizontal"
+                                                app:layout_constraintTop_toTopOf="@+id/userImage_1"
+                                                app:layout_constraintStart_toStartOf="@+id/userImage_1"
+                                                app:layout_constraintEnd_toEndOf="@+id/userImage_1"
+                                                app:layout_constraintBottom_toBottomOf="@+id/userImage_1"
+
+                                                android:textColor="@color/colorGrisIconText"
+                                                android:maxWidth="@dimen/userIconMaxWidth"
+                                                android:textSize="@dimen/userIconTextSize"
+                                                app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                                                app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                                                >
+                                            </TextView>
+
+                                        <ImageView
+                                            android:id="@+id/userImage_2"
+                                            android:tag="userImage_2"
+                                            android:layout_width="@dimen/userIconWidth"
+                                            android:layout_height="@dimen/userIconHeight"
+                                            android:src="@drawable/spagrisen_blue"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/userImage_3"
+                                            app:layout_constraintStart_toEndOf="@+id/userImage_1"
+                                            app:layout_constraintTop_toBottomOf="@+id/calculatePointUserIconPlaceHolder"
+                                            app:layout_constraintHorizontal_chainStyle="spread">
+                                        </ImageView>
+                                            <TextView
+                                                android:id="@+id/userImage_2_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:singleLine="true"
+                                                android:gravity="center_horizontal"
+                                                app:layout_constraintTop_toTopOf="@+id/userImage_2"
+                                                app:layout_constraintStart_toStartOf="@+id/userImage_2"
+                                                app:layout_constraintEnd_toEndOf="@+id/userImage_2"
+                                                app:layout_constraintBottom_toBottomOf="@+id/userImage_2"
+
+                                                android:textColor="@color/colorGrisIconText"
+                                                android:maxWidth="@dimen/userIconMaxWidth"
+                                                android:textSize="@dimen/userIconTextSize"
+                                                app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                                                app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                                                >
+                                            </TextView>
+
+                                        <ImageView
+                                            android:id="@+id/userImage_3"
+                                            android:tag="userImage_3"
+                                            android:layout_width="@dimen/userIconWidth"
+                                            android:layout_height="@dimen/userIconHeight"
+                                            android:src="@drawable/spagrisen_green"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/userImage_4"
+                                            app:layout_constraintStart_toEndOf="@+id/userImage_2"
+                                            app:layout_constraintTop_toBottomOf="@+id/calculatePointUserIconPlaceHolder"
+                                            app:layout_constraintHorizontal_chainStyle="spread">
+                                        </ImageView>
+                                            <TextView
+                                                android:id="@+id/userImage_3_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:singleLine="true"
+                                                android:gravity="center_horizontal"
+                                                app:layout_constraintTop_toTopOf="@+id/userImage_3"
+                                                app:layout_constraintStart_toStartOf="@+id/userImage_3"
+                                                app:layout_constraintEnd_toEndOf="@+id/userImage_3"
+                                                app:layout_constraintBottom_toBottomOf="@+id/userImage_3"
+
+                                                android:textColor="@color/colorGrisIconText"
+                                                android:maxWidth="@dimen/userIconMaxWidth"
+                                                android:textSize="@dimen/userIconTextSize"
+                                                app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                                                app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                                                >
+                                            </TextView>
+
+                                        <ImageView
+                                            android:id="@+id/userImage_4"
+                                            android:tag="userImage_4"
+                                            android:layout_width="@dimen/userIconWidth"
+                                            android:layout_height="@dimen/userIconHeight"
+                                            android:src="@drawable/spagrisen_red"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/userImage_5"
+                                            app:layout_constraintStart_toEndOf="@+id/userImage_3"
+                                            app:layout_constraintTop_toBottomOf="@+id/calculatePointUserIconPlaceHolder"
+                                            app:layout_constraintHorizontal_chainStyle="spread">
+                                        </ImageView>
+                                            <TextView
+                                                android:id="@+id/userImage_4_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:singleLine="true"
+                                                android:gravity="center_horizontal"
+                                                app:layout_constraintTop_toTopOf="@+id/userImage_4"
+                                                app:layout_constraintStart_toStartOf="@+id/userImage_4"
+                                                app:layout_constraintEnd_toEndOf="@+id/userImage_4"
+                                                app:layout_constraintBottom_toBottomOf="@+id/userImage_4"
+
+                                                android:textColor="@color/colorGrisIconText"
+                                                android:maxWidth="@dimen/userIconMaxWidth"
+                                                android:textSize="@dimen/userIconTextSize"
+                                                app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                                                app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                                                >
+                                            </TextView>
+
+                                        <ImageView
+                                            android:id="@+id/userImage_5"
+                                            android:tag="userImage_5"
+                                            android:layout_width="@dimen/userIconWidth"
+                                            android:layout_height="@dimen/userIconHeight"
+                                            android:src="@drawable/spagrisen_yellow"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/userImage_4"
+                                            app:layout_constraintTop_toBottomOf="@+id/calculatePointUserIconPlaceHolder"
+                                            app:layout_constraintHorizontal_chainStyle="spread">
+                                        </ImageView>
+                                            <TextView
+                                                android:id="@+id/userImage_5_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:singleLine="true"
+                                                android:gravity="center_horizontal"
+                                                app:layout_constraintTop_toTopOf="@+id/userImage_5"
+                                                app:layout_constraintStart_toStartOf="@+id/userImage_5"
+                                                app:layout_constraintEnd_toEndOf="@+id/userImage_5"
+                                                app:layout_constraintBottom_toBottomOf="@+id/userImage_5"
+
+                                                android:textColor="@color/colorGrisIconText"
+                                                android:maxWidth="@dimen/userIconMaxWidth"
+                                                android:textSize="@dimen/userIconTextSize"
+                                                app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                                                app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                                                >
+                                            </TextView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/monthButtonJanToJunLinearLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            app:layout_constraintTop_toBottomOf="@+id/calculatePointUserIconLinearLayout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/monthButtonJulToDecLinearLayout"
+                            app:layout_constraintVertical_chainStyle="packed"
+                            >
+
+                                <Button
+                                    android:id="@+id/btnJanuary"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnJanuaryLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+
+                                <Button
+                                    android:id="@+id/btnFebruary"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnFebruaryLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+
+                                <Button
+                                    android:id="@+id/btnMarch"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnMarchLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+
+                                <Button
+                                    android:id="@+id/btnApril"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnAprilLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+                                <Button
+                                    android:id="@+id/btnMay"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnMayLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+
+                                <Button
+                                    android:id="@+id/btnJune"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnJuneLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/monthButtonJulToDecLinearLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/monthButtonJanToJunLinearLayout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/totalPricePointTotalContainer"
+                            >
+
+                                <Button
+                                    android:id="@+id/btnJuly"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnJulyLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+                                <Button
+                                    android:id="@+id/btnAugust"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnAugustLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+                                <Button
+                                    android:id="@+id/btnSeptember"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnSeptemberLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+
+                                <Button
+                                    android:id="@+id/btnOctober"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnOctoberLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+
+                                <Button
+                                    android:id="@+id/btnNovember"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnNovemberLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+
+                                <Button
+                                    android:id="@+id/btnDecember"
+                                    android:layout_width="@dimen/monthButtonWidth"
+                                    android:layout_height="@dimen/monthButtonHeight"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_bg_round"
+                                    android:text="@string/btnDecemberLabel"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/buttonLabelTextSize"
+                                    android:textStyle="normal"
+                                    android:layout_margin="@dimen/monthButtonMargin"
+                                    />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/totalPricePointTotalContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="40dp"
+                            app:layout_constraintTop_toBottomOf="@id/monthButtonJulToDecLinearLayout"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                >
+
+                                <include layout="@layout/point_total" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="taskViewModel"
+            type="com.technology.mycow.spargrisenkt.viewmodel.TaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createTaskFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/createTaskFragmentBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/spargrisen_darkpink_main_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0.5"
+        >
+        </ImageView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/createTaskNestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/createTaskLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/taskTitleLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView
+                            android:id="@+id/taskTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/task_title_margin"
+                            android:textSize="@dimen/contextTitleTextSize"
+                            android:textAlignment="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+                        </TextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/createTaskLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/task_detail_margin"
+                android:background="@drawable/task_info_outline"
+                app:layout_constraintTop_toBottomOf="@+id/taskTitleLinearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/taskInputContainerHeight"
+
+
+                    >
+
+                    <TextView
+                        android:id="@+id/taskNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginTop="@dimen/taskInputItemTopMargin"
+                        app:layout_constraintEnd_toStartOf="@+id/taskNameEt"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/taskNameEt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/taskNameHint"
+                        android:inputType="textMultiLine"
+                        android:lines="2"
+                        android:textColor="@color/darkgray"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@+id/taskNameTv"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/taskDescriptionTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginTop="@dimen/taskInputItemTopMargin"
+                        app:layout_constraintEnd_toStartOf="@+id/taskDescriptionEt"
+
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/taskNameTv"
+                        >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/taskDescriptionEt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/taskDescriptionHint"
+
+                        android:inputType="textMultiLine"
+                        android:lines="5"
+                        android:textColor="@color/darkgray"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@+id/taskDescriptionTv"
+                        app:layout_constraintTop_toBottomOf="@+id/taskNameEt"
+                        >
+                    </EditText>
+
+
+                    <TextView
+                        android:id="@+id/pointTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginTop="@dimen/taskInputItemTopMargin"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintBaseline_toBaselineOf="@id/pointEt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/taskDescriptionTv"
+                        >
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/pointEt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/field_vertical_margin"
+                        android:hint="@string/pointOfTaskHint"
+                        android:inputType="number"
+                        android:textColor="@color/darkgray"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/pointTv"
+                        app:layout_constraintTop_toBottomOf="@+id/taskDescriptionEt"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/pointLabelAfterTv"
+                        >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/pointLabelAfterTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pointOfTaskLabelAfter"
+                        app:layout_constraintStart_toEndOf="@+id/pointEt"
+                        app:layout_constraintTop_toBottomOf="@+id/taskDescriptionEt"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="left"
+                        app:constraint_referenced_ids="pointTv,taskNameTv, taskDescriptionTv"
+                        tools:layout_editor_absoluteX="411dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/createTaskButtonContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/createTaskLinearLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/taskCreateButtonConstraint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/backTaskBtnLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/task_button_text_size"
+                            app:layout_constraintTop_toTopOf="@id/backTaskBtn"
+                            app:layout_constraintStart_toStartOf="@+id/backTaskBtn"
+                            app:layout_constraintEnd_toEndOf="@+id/backTaskBtn"
+                            app:layout_constraintBottom_toBottomOf="@+id/backTaskBtn"
+                            >
+                        </TextView>
+                        <ImageButton
+                            android:id="@+id/backTaskBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/field_vertical_margin"
+                            android:text="@string/backTaskLabelBtn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/createTaskBtnLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/task_button_text_size"
+                            app:layout_constraintTop_toTopOf="@+id/createTaskBtn"
+                            app:layout_constraintStart_toStartOf="@+id/createTaskBtn"
+                            app:layout_constraintEnd_toEndOf="@+id/createTaskBtn"
+                            app:layout_constraintBottom_toBottomOf="@+id/createTaskBtn"
+                            >
+                        </TextView>
+                        <ImageButton
+                            android:id="@+id/createTaskBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/field_vertical_margin"
+                            android:text="@string/createTaskLabelBtn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            >
+                        </ImageButton>
+
+                        <TextView
+                            android:id="@+id/completeTaskBtnLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/task_button_text_size"
+                            app:layout_constraintTop_toTopOf="@id/completeTaskBtn"
+                            app:layout_constraintStart_toStartOf="@+id/completeTaskBtn"
+                            app:layout_constraintEnd_toEndOf="@+id/completeTaskBtn"
+                            app:layout_constraintBottom_toBottomOf="@+id/completeTaskBtn"
+                            >
+                        </TextView>
+                        <ImageButton
+                            android:id="@+id/completeTaskBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/field_vertical_margin"
+                            android:text="@string/completeTaskLabelBtn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/completedTaskBtnLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/task_button_text_size"
+                            app:layout_constraintTop_toTopOf="@+id/completedTaskBtn"
+                            app:layout_constraintStart_toStartOf="@+id/completedTaskBtn"
+                            app:layout_constraintEnd_toEndOf="@+id/completedTaskBtn"
+                            app:layout_constraintBottom_toBottomOf="@+id/completedTaskBtn"
+                            >
+                        </TextView>
+                        <ImageButton
+                            android:id="@+id/completedTaskBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/field_vertical_margin"
+                            android:text="@string/completedTaskLabelBtn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+                        </ImageButton>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+<!--                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/createTaskButtonContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/createTaskLinearLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/createTaskBtnLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/task_button_text_size"
+                                app:layout_constraintTop_toTopOf="@+id/createTaskBtn"
+                                app:layout_constraintStart_toStartOf="@+id/createTaskBtn"
+                                app:layout_constraintEnd_toEndOf="@+id/createTaskBtn"
+                                app:layout_constraintBottom_toBottomOf="@+id/createTaskBtn"
+                                >
+                            </TextView>
+                            <ImageButton
+                                android:id="@+id/createTaskBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/field_vertical_margin"
+                                android:text="@string/createTaskLabelBtn"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+                            </ImageButton>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/completeTaskButtonContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/createTaskButtonContainer"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/completeTaskBtnLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/task_button_text_size"
+                            app:layout_constraintTop_toTopOf="@id/completeTaskBtn"
+                            app:layout_constraintStart_toStartOf="@+id/completeTaskBtn"
+                            app:layout_constraintEnd_toEndOf="@+id/completeTaskBtn"
+                            app:layout_constraintBottom_toBottomOf="@+id/completeTaskBtn"
+                            >
+                        </TextView>
+                        <ImageButton
+                            android:id="@+id/completeTaskBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/field_vertical_margin"
+                            android:text="@string/completeTaskLabelBtn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/backTaskButtonContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/completeTaskButtonContainer"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/backTaskBtnLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/task_button_text_size"
+                            app:layout_constraintTop_toTopOf="@id/backTaskBtn"
+                            app:layout_constraintStart_toStartOf="@+id/backTaskBtn"
+                            app:layout_constraintEnd_toEndOf="@+id/backTaskBtn"
+                            app:layout_constraintBottom_toBottomOf="@+id/backTaskBtn"
+                            >
+                        </TextView>
+                        <ImageButton
+                            android:id="@+id/backTaskBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/field_vertical_margin"
+                            android:text="@string/backTaskLabelBtn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

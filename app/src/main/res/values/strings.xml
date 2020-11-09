@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">Spargrisen</string>
+
+    //Menu
+    <string name="menuSubHeaderTasks">Tasks</string>
+    <string name="menuSubHeaderCreate">Create</string>
+    <string name="menuSubHeaderAction">Action</string>
+    <string name="menuSubHeaderPayment">Payment</string>
+    <string name="menuSubHeaderList">Lists</string>
+    <string name="menuFontCreateUser">&#xf4d3;</string>
+    <string name="menuFontAssignTask">&#xf0ae;</string>
+    <string name="menuFontShowOngoing">&#xf4d8;</string>
+    <string name="menuFontShowHistory">&#xf1da;</string>
+    <string name="menuCreateUser">Child</string>
+    <string name="menuCreateTask">Task</string>
+    <string name="menuAssignTask">Assign Task</string>
+    <string name="menuUserList">Child</string>
+    <string name="menuTaskList">Task</string>
+    <string name="menuShowOngoing">Complete Task</string>
+    <string name="menuCalculatePoint">Calc Payment</string>
+
+    //Tag
+    <string name="contentMainTag">contentMain</string>
+
+    //Drawer
+    <string name="opendrawer">Open</string>
+    <string name="closedrawer">Close</string>
+
+    //Context
+    <string name="contextTitle">&#xf6ed;</string>
+
+    //Dialog
+    <string name="action_prompt_assign_task_title">ASSIGN TASK</string>
+    <string name="action_prompt_assign_task_message">Assign this task?</string>
+    <string name="action_prompt_delete_user_title">DELETE USER</string>
+    <string name="action_prompt_delete_user_message">Do you want to delete? \nAssigned Task will be deleted too</string>
+    <string name="action_prompt_delete_task_title">DELETE TASK</string>
+    <string name="action_prompt_delete_task_message">Do you want to delete?</string>
+    <string name="action_prompt_positive">Yes</string>
+    <string name="action_prompt_negative">No</string>
+    <string name="action_prompt_cancel">Cancel</string>
+
+    //Create User + User List + Task + Task List Screen
+    <string name="userNameLabel">Child: </string>
+    <string name="userNameHint">Child Name</string>
+    <string name="createUserLabelBtn">CREATE</string>
+    <string name="rateOfPointLabel">Rate: </string>
+    <string name="rateOfPointHint">Base Task Point Rate</string>
+    <string name="taskNameLabel">Task: </string>
+    <string name="taskNameHint">Task</string>
+    <string name="taskDescriptionLable">Description:</string>
+    <string name="taskDescriptionHint">Description</string>
+    <string name="pointOfTaskLabelAfter">Point(s)</string>
+    <string name="pointOfTaskHint">Task Point</string>
+    <string name="pointLabel">Point(s)</string>
+    <string name="createTaskLabelBtn">CREATE</string>
+    <string name="completeTaskLabelBtn">COMPLETE</string>
+    <string name="completedTaskLabelBtn">COMPLETED</string>
+    <string name="backTaskLabelBtn">BACK</string>
+    <string name="task_title_create">Create New Task</string>
+    <string name="task_title_info">Task Info</string>
+    <string name="task_title_complete">Complete Task</string>
+    <string name="task_title_completed">GOOD JOB \nCompleted Task</string>
+    <string name="taskCompleteMessage">Woo-hoo!! \nGood Job!!</string>
+
+    <string name="fa_task_list">&#xf4d3;</string>
+
+    <string name="userImage_1">userImage_1</string>
+    <string name="userImage_2">userImage_2</string>
+    <string name="userImage_3">userImage_3</string>
+    <string name="userImage_4">userImage_4</string>
+    <string name="userImage_5">userImage_5</string>
+
+    //User Selection Icon HashMap Key name
+    <string name="iconPink">iconPink</string>
+    <string name="iconBlue">iconBlue</string>
+    <string name="iconGreen">iconGreen</string>
+    <string name="iconRed">iconRed</string>
+    <string name="iconYellow">iconYellow</string>
+
+    //User Select Button
+    <string name="selectUserChildDefault">CLICK</string>
+    <string name="selectUserChildPink"></string>
+    <string name="selectUserChildBlue"></string>
+    <string name="selectUserChildGreen"></string>
+    <string name="selectUserChildRed"></string>
+    <string name="selectUserChildYellow"></string>
+
+    //User status
+    <string name="userTaskOngoing">Ongoing</string>
+    <string name="userTaskCompleted">Completed</string>
+    <string name="userTaskPending">Pending</string>
+
+    //Task status
+    <string name="taskOngoing">Ongoing</string>
+    <string name="taskCompleted">Completed</string>
+    <string name="taskUnassigned">Unassigned</string>
+
+    //Total Point
+    <string name="pointTotalHint">0</string>
+    <string name="pointUnit">Kr</string>
+    <string name="pointTotalInPeriodHint">TOTAL POINT</string>
+    <string name="pointUnitComment">(Base Task Point Rate)</string>
+    
+    //Month Button Text
+    <string name="btnJanuaryLabel">Jan</string>
+    <string name="btnFebruaryLabel">Feb</string>
+    <string name="btnMarchLabel">Mar</string>
+    <string name="btnAprilLabel">Apr</string>
+    <string name="btnMayLabel">May</string>
+    <string name="btnJuneLabel">Jun</string>
+    <string name="btnJulyLabel">Jul</string>
+    <string name="btnAugustLabel">Aug</string>
+    <string name="btnSeptemberLabel">Sep</string>
+    <string name="btnOctoberLabel">Oct</string>
+    <string name="btnNovemberLabel">Nov</string>
+    <string name="btnDecemberLabel">Dec</string>
+
+    //Task Status Sort Button
+    <string name="taskStatusOngoingSortButtonText">Active</string>
+    <string name="taskStatusCompletedSortButtonText">Completed</string>
+
+    //ContentMain Text
+    <string name="contentMainText">Get work done, and earn from your work.\n
+Waiting time to be served your monthly reward is a long long time. \nMeantimes you can plan what you spend or save it for future.</string>
+
+
+</resources>

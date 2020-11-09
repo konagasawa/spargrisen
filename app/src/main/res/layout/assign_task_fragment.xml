@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+<!--    <TableLayout
+        android:id="@+id/assignTaskToUserTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+    </TableLayout>-->
+
+    <ImageView
+        android:id="@+id/assignTaskFragmentBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/spargrisen_darkpink_main_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:alpha="0.5"
+        >
+    </ImageView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/assignTaskFragmentNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userIconContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/createUserIconLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/assignTaskListContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.Placeholder
+                        android:id="@+id/assignTaskUserIconPlaceHolder"
+                        android:layout_width="@dimen/userIconAssignTaskPlaceHolderWidth"
+                        android:layout_height="@dimen/userIconAssignTaskPlaceHolderHeight"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </androidx.constraintlayout.widget.Placeholder>
+                        <TextView
+                            android:id="@+id/assignTaskUserIconPlaceHolder_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/assignTaskUserIconPlaceHolder"
+                            app:layout_constraintEnd_toEndOf="@+id/assignTaskUserIconPlaceHolder"
+                            app:layout_constraintStart_toStartOf="@+id/assignTaskUserIconPlaceHolder"
+                            app:layout_constraintTop_toTopOf="@+id/assignTaskUserIconPlaceHolder"
+
+                            android:textColor="@color/colorGrisIconPlaceHolderText"
+                            android:maxWidth="@dimen/userIconPlaceHolderMaxWidth"
+                            android:textSize="@dimen/userIconPlaceHolderTextSize"
+                            app:layout_constraintVertical_bias="@dimen/userIconPlaceHolderVerticalBias"
+                            app:layout_constraintHorizontal_bias="@dimen/userIconPlaceHolderHorizontalBias"
+                            >
+                        </TextView>
+
+
+                    <ImageView
+                        android:id="@+id/userImage_1"
+                        android:tag="userImage_1"
+                        android:layout_width="@dimen/userIconWidth"
+                        android:layout_height="@dimen/userIconHeight"
+                        android:src="@drawable/spagrisen_pink"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/userImage_2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/assignTaskUserIconPlaceHolder"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        >
+                    </ImageView>
+                        <TextView
+                            android:id="@+id/userImage_1_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:gravity="center_horizontal"
+                            app:layout_constraintTop_toTopOf="@+id/userImage_1"
+                            app:layout_constraintStart_toStartOf="@+id/userImage_1"
+                            app:layout_constraintEnd_toEndOf="@+id/userImage_1"
+                            app:layout_constraintBottom_toBottomOf="@+id/userImage_1"
+
+                            android:textColor="@color/colorGrisIconText"
+                            android:maxWidth="@dimen/userIconMaxWidth"
+                            android:textSize="@dimen/userIconTextSize"
+                            app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                            app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                            >
+                        </TextView>
+
+                    <ImageView
+                        android:id="@+id/userImage_2"
+                        android:tag="userImage_2"
+                        android:layout_width="@dimen/userIconWidth"
+                        android:layout_height="@dimen/userIconHeight"
+                        android:src="@drawable/spagrisen_blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/userImage_3"
+                        app:layout_constraintStart_toEndOf="@+id/userImage_1"
+                        app:layout_constraintTop_toBottomOf="@+id/assignTaskUserIconPlaceHolder"
+                        app:layout_constraintHorizontal_chainStyle="spread">
+                    </ImageView>
+                        <TextView
+                            android:id="@+id/userImage_2_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:gravity="center_horizontal"
+                            app:layout_constraintTop_toTopOf="@+id/userImage_2"
+                            app:layout_constraintStart_toStartOf="@+id/userImage_2"
+                            app:layout_constraintEnd_toEndOf="@+id/userImage_2"
+                            app:layout_constraintBottom_toBottomOf="@+id/userImage_2"
+
+                            android:textColor="@color/colorGrisIconText"
+                            android:maxWidth="@dimen/userIconMaxWidth"
+                            android:textSize="@dimen/userIconTextSize"
+                            app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                            app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                            >
+                        </TextView>
+
+                    <ImageView
+                        android:id="@+id/userImage_3"
+                        android:tag="userImage_3"
+                        android:layout_width="@dimen/userIconWidth"
+                        android:layout_height="@dimen/userIconHeight"
+                        android:src="@drawable/spagrisen_green"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/userImage_4"
+                        app:layout_constraintStart_toEndOf="@+id/userImage_2"
+                        app:layout_constraintTop_toBottomOf="@+id/assignTaskUserIconPlaceHolder"
+                        app:layout_constraintHorizontal_chainStyle="spread">
+                    </ImageView>
+                        <TextView
+                            android:id="@+id/userImage_3_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:gravity="center_horizontal"
+                            app:layout_constraintTop_toTopOf="@+id/userImage_3"
+                            app:layout_constraintStart_toStartOf="@+id/userImage_3"
+                            app:layout_constraintEnd_toEndOf="@+id/userImage_3"
+                            app:layout_constraintBottom_toBottomOf="@+id/userImage_3"
+
+                            android:textColor="@color/colorGrisIconText"
+                            android:maxWidth="@dimen/userIconMaxWidth"
+                            android:textSize="@dimen/userIconTextSize"
+                            app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                            app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                            >
+                        </TextView>
+
+                    <ImageView
+                        android:id="@+id/userImage_4"
+                        android:tag="userImage_4"
+                        android:layout_width="@dimen/userIconWidth"
+                        android:layout_height="@dimen/userIconHeight"
+                        android:src="@drawable/spagrisen_red"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/userImage_5"
+                        app:layout_constraintStart_toEndOf="@+id/userImage_3"
+                        app:layout_constraintTop_toBottomOf="@+id/assignTaskUserIconPlaceHolder"
+                        app:layout_constraintHorizontal_chainStyle="spread">
+                    </ImageView>
+                        <TextView
+                            android:id="@+id/userImage_4_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:gravity="center_horizontal"
+                            app:layout_constraintTop_toTopOf="@+id/userImage_4"
+                            app:layout_constraintStart_toStartOf="@+id/userImage_4"
+                            app:layout_constraintEnd_toEndOf="@+id/userImage_4"
+                            app:layout_constraintBottom_toBottomOf="@+id/userImage_4"
+
+                            android:textColor="@color/colorGrisIconText"
+                            android:maxWidth="@dimen/userIconMaxWidth"
+                            android:textSize="@dimen/userIconTextSize"
+                            app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                            app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                            >
+                        </TextView>
+
+                    <ImageView
+                        android:id="@+id/userImage_5"
+                        android:tag="userImage_5"
+                        android:layout_width="@dimen/userIconWidth"
+                        android:layout_height="@dimen/userIconHeight"
+                        android:src="@drawable/spagrisen_yellow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userImage_4"
+                        app:layout_constraintTop_toBottomOf="@+id/assignTaskUserIconPlaceHolder"
+                        app:layout_constraintHorizontal_chainStyle="spread">
+                    </ImageView>
+                        <TextView
+                            android:id="@+id/userImage_5_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:gravity="center_horizontal"
+                            app:layout_constraintTop_toTopOf="@+id/userImage_5"
+                            app:layout_constraintStart_toStartOf="@+id/userImage_5"
+                            app:layout_constraintEnd_toEndOf="@+id/userImage_5"
+                            app:layout_constraintBottom_toBottomOf="@+id/userImage_5"
+
+                            android:textColor="@color/colorGrisIconText"
+                            android:maxWidth="@dimen/userIconMaxWidth"
+                            android:textSize="@dimen/userIconTextSize"
+                            app:layout_constraintVertical_bias="@dimen/userIconVerticalBias"
+                            app:layout_constraintHorizontal_bias="@dimen/userIconHorizontalBias"
+                            >
+                        </TextView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/assignTaskListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <include layout="@layout/list_recyclerview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

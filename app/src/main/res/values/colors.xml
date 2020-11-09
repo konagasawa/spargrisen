@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkgray">#505050</color>
+
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="drawerBackground">#92547A</color>
+
+    <color name="splashBackground">#F8DBE5</color>
+    <color name="colorFontTitle">#DFA69C</color>
+    <color name="colorFontPrimary"></color>
+    <color name="colorFontPrimaryDark"></color>
+    <color name="colorFontAccent"></color>
+
+    //ICON
+    <color name="colorGrisIconPink">#DE83D6</color>
+    <color name="colorGrisIconBlue">#4447D6</color>
+    <color name="colorGrisIconGreen">#59976F</color>
+    <color name="colorGrisIconYellow">#EDF174</color>
+    <color name="colorGrisIconRed">#DF6060</color>
+    //ICON TEXT
+    <color name="colorGrisIconText">#F8DBE5</color>
+    <color name="colorGrisIconPlaceHolderText">#FFFFFFFF</color>
+
+    <color name="colorCalculateTotalPriceDefaultText">#43061e</color>
+    <color name="colorCalculateTotalPriceText">#F0F634</color>
+    <color name="colorCalculateTotalPriceHintText">#A15D9E</color>
+
+    <color name="colorCreateChildFragmentBackground">#91ACBF</color>
+    <color name="colorCreateChildFragmentItemsBackground">#BCC9D3</color>
+
+    <color name="colorTaskListItemBackground">#B57FB2</color>
+    <color name="colorTaskListItemBackgroundPressed">#98BF9E</color>
+    <color name="colorTaskListItemOutline">#92547A</color>
+    <color name="colorTaskListItemStatusOngoingText">#CBF3C6</color>
+    <color name="colorTaskListItemStatusCompletedText">#FAF9B6</color>
+    <color name="colorTaskListItemStatusUnassignedText">#FBDED9</color>
+
+    //List Item
+    <color name="colorUserListItemBackground">#7296AE</color>
+    <color name="colorUserListItemBackgroundPressed">#98BF9E</color>
+    <color name="colorUserListItemOutline">#3E5564</color>
+
+    //SWIPE TO DELETE
+    <color name="colorSwipeToDeleteBackground">#FFB33448</color>
+
+    //Dialog
+    <color name="colorDialogWindowBackground">#8F5F8D</color>
+    <color name="colorDialogWindowOutline">#CAA3C8</color>
+
+    //Content Main
+    <color name="colorContentMainText">#803A7D</color>
+
+</resources>

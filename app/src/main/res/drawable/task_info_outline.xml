@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/task_info_outline_corner" />
+    <padding
+        android:top="@dimen/task_info_outline_padding"
+        android:left="@dimen/task_info_outline_padding"
+        android:bottom="@dimen/task_info_outline_padding"
+        android:right="@dimen/task_info_outline_padding" />
+    <stroke
+        android:width="@dimen/task_info_outline_width"
+        android:color="@color/white" />
+</shape>
