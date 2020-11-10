@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.*
 import com.technology.mycow.spargrisenkt.R
 import com.technology.mycow.spargrisenkt.db.entity.User
+import java.text.NumberFormat
 
 class UserListAdapter internal constructor(context: Context): Adapter<UserListAdapter.UserListViewHolder>() {
 
@@ -31,6 +32,7 @@ class UserListAdapter internal constructor(context: Context): Adapter<UserListAd
         if(user != null){
             holder.mUserName.text = user.userName
             holder.mRateOfPoint.text = user.rateOfPoint.toString()
+            holder.mRateOfPointUnit.text = getCurrencyUnit()
             holder.userImageMap.forEach { userImageName ->
                 if(userImageName.key == user.iconTag){
                     holder.mUserListItemIcon.setImageDrawable(userImageName.value)
@@ -76,15 +78,24 @@ class UserListAdapter internal constructor(context: Context): Adapter<UserListAd
         mHolderUserItemTouchedListener = holderItemTouchedListener
     }
 
+    private fun getCurrencyUnit(): String {
+
+        val currencyFormatted = NumberFormat.getCurrencyInstance()
+
+        return currencyFormatted.currency.currencyCode
+    }
+
     inner class UserListViewHolder(itemView: View) : ViewHolder(itemView) {
         var mUserName: TextView
         var mRateOfPoint: TextView
+        var mRateOfPointUnit: TextView
         var mUserListItemIcon : ImageView
         var userImageMap = mutableMapOf<String, Drawable>()
 
         init {
             mUserName = itemView.findViewById(R.id.userListUserNameTv)
             mRateOfPoint = itemView.findViewById(R.id.userListRateTv)
+            mRateOfPointUnit = itemView.findViewById(R.id.userListRateUnitTv)
             mUserListItemIcon = itemView.findViewById(R.id.userListItemIcon)
 
             userImageMap[itemView.resources.getString(R.string.userImage_1)] = itemView.resources.getDrawable(R.drawable.spagrisen_pink, null)
